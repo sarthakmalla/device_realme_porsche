@@ -14,9 +14,15 @@ $(call inherit-product, device/realme/porsche/device.mk)
 
 # Inherit some common EvolutionX stuff.
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-EVO_BUILD_TYPE := UNOFFICIAL
+
+EXTRA_UDFPS_ANIMATIONS := true
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_USES_PICO_GAPPS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USES_MINI_GAPPS :=true
+TARGET_USES_OPLUS_CAMERA :=true
+TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS :=true
+TARGET_NEEDS_OPLUS_VENDOR_TAG :=true
+EVO_BUILD_TYPE := UNOFFICIAL
 
 PRODUCT_NAME := evolutionx_porche
 PRODUCT_DEVICE := porsche
